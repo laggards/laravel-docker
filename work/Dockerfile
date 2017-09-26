@@ -1,6 +1,6 @@
 FROM php:7-alpine
 
-MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
+MAINTAINER REN YANJI <laggards@hotmail.com>
 
 ENV TIMEZONE  Asia/Shanghai
 
