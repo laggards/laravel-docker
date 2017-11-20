@@ -39,6 +39,7 @@ RUN docker-php-ext-configure json && \
 # Build and install PHP extensions
 RUN docker-php-ext-install json \
     sockets \
+    soap  \
     exif \
     opcache \
     session \
