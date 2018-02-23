@@ -5,7 +5,6 @@ MAINTAINER REN YANJI <laggards@hotmail.com>
 ENV TIMEZONE  Asia/Shanghai
 
 RUN apk --update add wget \
-  curl \
   git \
   build-base \
   libmemcached-dev \
@@ -23,7 +22,7 @@ RUN cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \
 
 RUN docker-php-ext-configure pdo_pgsql
 
-RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql pdo_pgsql mcrypt tokenizer
+RUN docker-php-ext-install mysqli pdo_mysql pdo_pgsql mcrypt tokenizer
 RUN pecl channel-update pecl.php.net && pecl install memcached && docker-php-ext-enable memcached
 
 RUN rm /var/cache/apk/* \
