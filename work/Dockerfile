@@ -11,7 +11,6 @@ RUN apk --update add wget \
   libmcrypt-dev \
   postgresql-dev \
   libpng-dev \
-  zlib-dev \
   autoconf \
   cyrus-sasl-dev \
   libgsasl-dev \
