@@ -4,7 +4,7 @@ MAINTAINER REN YANJI <laggards@hotmail.com>
 
 ENV MEMCACHED_DEPS zlib-dev libmemcached-dev cyrus-sasl-dev
 # Install dependencies
-RUN apk --no-cache --update add openssl-dev libxml2-dev curl-dev libmemcached-dev zlib libpng-dev postgresql-dev libjpeg-turbo-dev freetype-dev && \
+RUN apk --no-cache --update add libxml2-dev curl-dev libmemcached-dev zlib libpng-dev postgresql-dev libjpeg-turbo-dev freetype-dev && \
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
 
