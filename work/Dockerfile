@@ -11,6 +11,7 @@ RUN apk --update add wget \
   libmcrypt-dev \
   postgresql-dev \
   libpng-dev \
+  zlib-dev \
   autoconf \
   cyrus-sasl-dev \
   libgsasl-dev \
@@ -21,7 +22,7 @@ RUN cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \
 
 RUN docker-php-ext-configure pdo_pgsql
 
-RUN docker-php-ext-install mysqli pdo_mysql pdo_pgsql mcrypt
+RUN docker-php-ext-install mysqli pdo_pgsql mcrypt
 RUN pecl channel-update pecl.php.net && pecl install memcached && docker-php-ext-enable memcached
 
 RUN rm /var/cache/apk/* \
