@@ -20,9 +20,6 @@ RUN apk --update add wget \
 RUN cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \
     echo "${TIMEZONE}" > /etc/timezone
 
-RUN docker-php-ext-configure pdo_pgsql
-
-RUN docker-php-ext-install mcrypt
 RUN pecl channel-update pecl.php.net && pecl install memcached && docker-php-ext-enable memcached
 
 RUN rm /var/cache/apk/* \
