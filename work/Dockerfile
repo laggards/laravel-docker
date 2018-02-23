@@ -7,7 +7,6 @@ ENV TIMEZONE  Asia/Shanghai
 RUN apk --update add wget \
   curl \
   git \
-  openssl-dev \
   build-base \
   libmemcached-dev \
   libmcrypt-dev \
