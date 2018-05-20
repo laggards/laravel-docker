@@ -30,6 +30,7 @@ RUN docker-php-ext-configure json && \
     docker-php-ext-configure pdo && \
     docker-php-ext-configure pdo_mysql && \
     docker-php-ext-configure pdo_pgsql && \
+    docker-php-ext-configure mysqli && \
     docker-php-ext-configure curl && \
     docker-php-ext-configure iconv && \
     docker-php-ext-configure xml && \
@@ -52,6 +53,7 @@ RUN docker-php-ext-install json \
     pdo \
     pdo_mysql \
     pdo_pgsql \
+    mysqli \
     curl \
     iconv \
     xml  \
