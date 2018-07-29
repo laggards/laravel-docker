@@ -4,13 +4,17 @@ MAINTAINER REN YANJI <laggards@hotmail.com>
 
 ENV MEMCACHED_DEPS zlib-dev libmemcached-dev cyrus-sasl-dev
 # Install dependencies
+RUN apk update
+
 RUN apk add --no-cache --update \
     libgcc libstdc++ libx11 glib libxrender libxext libintl \
     libcrypto1.0 libssl1.0 \
     ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family \
-    openssl-dev libxml2-dev curl-dev libmemcached-dev zlib libpng-dev postgresql-dev libjpeg-turbo-dev freetype-dev && \
-    rm -rf /tmp/* && \
-    rm -rf /var/cache/apk/*
+    openssl-dev libxml2-dev curl-dev libmemcached-dev zlib libpng-dev postgresql-dev libjpeg-turbo-dev freetype-dev
+
+RUN rm -rf /tmp/*
+
+RUN rm -rf /var/cache/apk/*
 
 RUN set -xe \
     && apk add --no-cache --update --virtual .phpize-deps $PHPIZE_DEPS \
