@@ -4,8 +4,8 @@ MAINTAINER REN YANJI <laggards@hotmail.com>
 
 ENV MEMCACHED_DEPS zlib-dev libmemcached-dev cyrus-sasl-dev
 # Install dependencies
-RUN apk --no-cache --update \
-    add libgcc libstdc++ libx11 glib libxrender libxext libintl \
+RUN apk add --no-cache --update \
+    libgcc libstdc++ libx11 glib libxrender libxext libintl \
     libcrypto1.0 libssl1.0 \
     ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family \
     openssl-dev libxml2-dev curl-dev libmemcached-dev zlib libpng-dev postgresql-dev libjpeg-turbo-dev freetype-dev && \
