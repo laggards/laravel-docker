@@ -8,7 +8,7 @@ RUN apk update
 
 RUN apk add --no-cache --update \
     libgcc libstdc++ libx11 glib libxrender libxext libintl \
-    libcrypto1.0 libssl1.0 ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family \
+    libssl1.0 ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family \
     libxml2-dev curl-dev libmemcached-dev zlib libpng-dev postgresql-dev libjpeg-turbo-dev freetype-dev
 
 RUN rm -rf /tmp/*
