@@ -12,6 +12,8 @@ RUN apk --update add wget \
   postgresql-dev \
   libpng-dev \
   zlib-dev \
+  pdo \
+  pdo_mysql \
   autoconf \
   cyrus-sasl-dev \
   libgsasl-dev \
