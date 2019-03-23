@@ -6,10 +6,10 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package.json /usr/src/app/
-RUN npm install
+#RUN npm install
 
 # Bundle app source
 COPY laravel-echo-server.json /usr/src/app/laravel-echo-server.json
 
 EXPOSE 3000
-CMD [ "npm", "start" ]
+CMD [ "npm", "install" ]
