@@ -5,8 +5,5 @@
   "license": "MIT",
   "dependencies": {
     "laravel-echo-server": "^1.5.0"
-  },
-  "scripts": {
-    "start": "laravel-echo-server start"
   }
 }
