@@ -65,7 +65,8 @@ RUN docker-php-ext-install json \
     iconv \
     xml  \
     phar \
-    gd
+    gd  \
+    bcmath
 
 RUN docker-php-source delete
 
